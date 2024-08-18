@@ -6,7 +6,8 @@ let socket: Socket;
 
 export const connectToServer = (token: string) => {
 
-    const manager = new Manager('http://localhost:3000/socket.io/socket.io.js', {
+    // En local seria http://localhost:3000/socket.io/socket.io.js
+    const manager = new Manager('https://teslo-nestjs-06em.onrender.com/socket.io/socket.io.js', {
         extraHeaders: {
             authentication: token
         } // Aquí se envía el token
